@@ -9,7 +9,7 @@ RUN git clone --depth=1 https://github.com/Sean-Der/fail2rest.git && \
     go install && \
     cd .. && rm -rf fail2rest
 
-RUN git clone --depth=1 https://github.com/Sean-Der/fail2web.git && \
+RUN git clone --depth=1 https://github.com/fargies/fail2web.git && \
     mkdir -p /var/www && \
     mv fail2web/web /var/www/fail2web && \
     rm -rf fail2web
