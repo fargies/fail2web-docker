@@ -23,6 +23,8 @@ COPY fail2rest.conf /config/fail2rest.conf
 COPY fail2rest.sh /docker-entrypoint.d/99-fail2rest.sh
 
 RUN chmod +x /docker-entrypoint.d/99-fail2rest.sh
+# Allow overrides
+RUN chmod 666 /config/*
 
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 
